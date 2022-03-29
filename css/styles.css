@@ -198,8 +198,11 @@ header{
 
 }
 .precio{
-    font-size: 40px;
-    font-weight: 700;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
 }
 
 .slider{
@@ -1097,6 +1100,12 @@ footer{
     justify-content: center;
  
     flex-direction: column;
+}
+.list h2{
+    font-size:25px ;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px 0px;
 }
   .container_tratamientos{
     display: flex;
