@@ -16,9 +16,9 @@ header{
 }
 .header_uno{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px  150px;
+    padding: 10px  10px;
 }
 .header_uno img{
     max-width: 10%;
@@ -46,25 +46,23 @@ header{
 }
 .header_dos{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 10px 150px;
+    padding: 10px 0px;
     background-color: #621380;
+
 }
 .header_dos h1{
-    font-size: 35px;
+    font-size: 30px;
     color: #fff;
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
-.header_dos a{
-    display: block;
-    padding: 16px 30px;
-    text-align: center;
-    background-color: #ed1e79;
-    color: #fff;
-    text-decoration: none;
+.header_dos  h2{
     font-size: 20px;
+    color: #fff;
+    font-weight: 300;
 }
 .beginning{
    width: 100%;
@@ -80,14 +78,18 @@ header{
 .card{
     position: absolute;
     background: rgba(98,19,128,.8);
-    width: 67%;
-    max-width: 900px;
-    height: 500px;
+    width: 70%;
+    max-width: 1000px;
+    height: 650px;
     transition: 1s;
     display: flex;
     flex-wrap: wrap;
     
     
+}
+
+.item_card:nth-child(1) .img_card{
+    max-width: 50%;
 }
 
 .item_card:nth-child(1){
@@ -119,24 +121,98 @@ header{
     justify-content: center;
     align-items: center;
 }
-.item_card:nth-child(3) a{
+.icono_card_uno{
+    background-color: #00bb2d;
     display: block;
-    padding: 10px 0px;
-    width: 180px;
-    background-color: #fff;
-    margin: 10px;
-    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
     text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    color: #621380;
+    color: #fff;
+    margin: 0px 7px;
+    font-size: 35px;
+     transition: 0.5s;
 }
-.item_card:nth-child(3) a i{
-  margin-right: 7px;
-  font-size: 19px;
-  color: #621380;
+.icono_card_uno:hover {
+    border:2px solid #00bb2d;
+    transition: 0.5s;
+    color: #00bb2d;
+    background-color: transparent;
+}
+.icono_card_dos:hover{
+    border:2px solid #051367;
+    transition: 0.5s;
+    color: #051367;
+    background-color: transparent;
 }
 
+ .icono_card_dos{
+     display: block;
+      transition: 0.5s;
+    background-color: #051367;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+
+}
+.icono_card_uno_1{
+    background-color: #00bb2d;
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    margin: 0px 7px;
+    font-size: 35px;
+     transition: 0.5s;
+}
+.icono_card_uno_1:hover {
+    border:2px solid #00bb2d;
+    transition: 0.5s;
+    color: #00bb2d;
+    background-color: transparent;
+}
+.icono_card_dos_2:hover{
+    border:2px solid #051367;
+    transition: 0.5s;
+    color: #051367;
+    background-color: transparent;
+}
+
+ .icono_card_dos_2{
+     display: none;
+      transition: 0.5s;
+    background-color: #051367;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+
+}
+.item_card:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.item_card:nth-child(4) span{
+    color: #fff;
+    font-size: 17px;
+    margin-top: 5px;
+    font-weight: 500;
+}
 
 .sub_item_card{
     display: flex;
@@ -214,6 +290,43 @@ header{
     color: #621380;
     text-align: center;
     text-transform: uppercase;
+    margin: 10px 0px;
+}
+.container_promociones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0px 20px 0px;
+}
+.item_promo img{
+    max-width: 100%;
+    border: 2px solid #621380;
+    transition: 0.7s;
+}
+.item_promo img:hover{
+    box-shadow: 10px 10px 10px #662d91;
+    transform: scale(0.9);
+    transition: 0.7s;
+}
+.item_promo a{
+    display: block;
+    width: 150px;
+    background-color: #621380;
+    color: #fff;
+    margin: 10px auto;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.item_promo a:hover{
+    background-color: rgba(98,19,128,.5);
+    transition: 0.5s;
+    color: #621380;
+    font-weight: 500;
+
 }
 .list{
     width: 100%;
@@ -408,21 +521,25 @@ footer{
 .item_footer:nth-child(2){
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     text-align: center;
  background-color: #621380;
- padding: 15px 0px;
+ padding: 10px 0px;
+ align-items: center;
     
 
 }
 .item_footer:nth-child(2) p{
     color: #fff;
-    font-size: 17px;
+    font-size: 15px;
 }
 .item_footer:nth-child(2) p a{
     text-decoration: none;
     color: #fff;
+}
+.item_footer:nth-child(2) img{
+    max-width: 18%;
 }
 .sub_item_footer:nth-child(1) {
     position: relative;
