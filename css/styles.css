@@ -25,7 +25,6 @@ header{
 }
 .header_uno ul{
     display: flex;
-    justify-content: space-between;
     align-items: center; 
     list-style: none;
 }
@@ -186,14 +185,15 @@ header{
     display: block;
     transition: 0.5s;
     background-color: #051367;
-    width: 60px;
+    width: 110px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 10px;
     line-height: 60px;
     text-align: center;
     color: #fff;
-    font-size: 35px;
-    
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
 .agenda{
     display: none;
@@ -228,16 +228,18 @@ header{
 }
 
  .icono_card_dos_2{
-     display: block;
-      transition: 0.5s;
+    display: block;
+    transition: 0.5s;
     background-color: #051367;
-    width: 60px;
+    width: 110px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 10px;
     line-height: 60px;
     text-align: center;
     color: #fff;
-    font-size: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 
 }
 .item_card:nth-child(4){
@@ -335,7 +337,7 @@ header{
 }
 .container_promociones{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 90%;
     text-align: center;
@@ -820,6 +822,7 @@ footer{
         height: auto;
         visibility: visible;
       z-index: 999;
+			height: 100vh;
     }
     .header_uno ul li {
         margin: 25px 0px;
@@ -929,19 +932,6 @@ footer{
         background-color: transparent;
     }
     
-     .icono_card_dos_2{
-         display: block;
-          transition: 0.5s;
-        background-color: #051367;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        line-height: 60px;
-        text-align: center;
-        color: #fff;
-        font-size: 35px;
-    
-    }
     .item_card:nth-child(1){
         display: flex;
         flex-direction: column;
@@ -1203,7 +1193,17 @@ footer{
     text-align: center;
  
 }
-
+.icono_card_dos_22 {
+	transition: 0.5s;
+  background-color: #051367;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+}
 
   }
   @media (max-width:480px){
@@ -1519,7 +1519,26 @@ z-index: 150;
  
     
   }
-
+@media (max-width:768px) {
+	.icono_card_dos_2 {
+		height: 40px;
+		line-height: 40px;
+	}
+}
+@media (min-width:1024px) {
+	.icono_card_dos_22{
+    background-color: #051367;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    margin: 0px 7px;
+    font-size: 35px;
+}
+}
   @media (max-width:380px){
     .header_dos{
         display: flex;
@@ -1573,6 +1592,12 @@ z-index: 150;
         font-size: 25px;
          transition: 0.5s;
     }
+		.icono_card_dos_22{
+			line-height: 45px;
+			width: 45px;
+			height: 45px;
+			font-size: 25px;
+	}
     .icono_card_uno_1:hover {
         border:2px solid #00bb2d;
         transition: 0.5s;
@@ -1584,21 +1609,6 @@ z-index: 150;
         transition: 0.5s;
         color: #051367;
         background-color: transparent;
-    }
-    
-     .icono_card_dos_2{
-         display: block;
-          transition: 0.5s;
-        background-color: #051367;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        line-height: 45px;
-        text-align: center;
-        color: #fff;
-        font-size: 25px;
-    
-    }
-    
+    }   
 
   }
