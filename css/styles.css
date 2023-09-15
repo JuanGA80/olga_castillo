@@ -337,12 +337,13 @@ header{
 }
 .container_promociones{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(300px, 400px));
     gap: 30px;
     width: 90%;
     text-align: center;
     margin: auto;
     padding: 10px 0px 20px 0px;
+    justify-content: center;
 }
 .item_promo img{
     max-width: 100%;
