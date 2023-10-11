@@ -344,6 +344,48 @@ header{
     margin: auto;
     padding: 10px 0px 20px 0px;
     justify-content: center;
+    justify-items: center;
+}
+/*Estilos modal promociones*/
+.modal-promo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 1s;
+  }
+  .modal-promo .promo {
+    max-width: 30%;
+    max-height: 50%;
+    margin: 20px;
+  }
+  .modal-promo .cerrar-promo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+  }
+  .modal-promo .modal-texto {
+    position: fixed;
+    top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .abrir {
+  transition: 1s;
+  transform: scale(1);
 }
 .item_promo img{
     max-width: 100%;
@@ -1212,6 +1254,30 @@ footer{
 }
 
   }
+
+  @media (max-width: 766px) {
+    .modal-promo{
+      flex-direction: column;
+    }
+    .modal-promo .modal-texto {
+      text-align: center;
+      top: 10%;
+      font-size: 20px;
+      font-weight: bold;
+      position: initial;
+      margin-top: 15%;
+      padding: 10px;
+    }
+    .modal-promo .cerrar-promo {
+      width: 25px;
+      top: 10px;
+    }
+    .modal-promo .promo {
+      max-width: 40%;
+      max-height: 30%;
+      margin: 10px 10px 10px 10px;
+    }
+  }
   @media (max-width:480px){
     .header_uno img{
         max-width: 30%;
@@ -1530,6 +1596,13 @@ z-index: 150;
 		height: 40px;
 		line-height: 40px;
 	}
+}
+@media (min-width: 768px) {
+    .promo-5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        max-width: 500px;
+    }
 }
 @media (min-width:1024px) {
 	.icono_card_dos_22{
