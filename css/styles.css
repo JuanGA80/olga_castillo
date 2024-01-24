@@ -337,12 +337,55 @@ header{
 }
 .container_promociones{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(300px, 400px));
     gap: 30px;
     width: 90%;
     text-align: center;
     margin: auto;
     padding: 10px 0px 20px 0px;
+    justify-content: center;
+    justify-items: center;
+}
+/*Estilos modal promociones*/
+.modal-promo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 1s;
+  }
+  .modal-promo .promo {
+    max-width: 30%;
+    max-height: 50%;
+    margin: 20px;
+  }
+  .modal-promo .cerrar-promo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+  }
+  .modal-promo .modal-texto {
+    position: fixed;
+    top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .abrir {
+  transition: 1s;
+  transform: scale(1);
 }
 .item_promo img{
     max-width: 100%;
@@ -558,11 +601,9 @@ margin:  auto;
 }
 footer{
     width: 100%;
-    
-    background-color: #eeee;
    
 }
-.item_footer:nth-child(1){
+.item_footer:nth-child(1), .acoxpa-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
    width: 90%;
@@ -594,39 +635,48 @@ footer{
 .item_footer:nth-child(2) img{
     max-width: 20%;
 }
-.sub_item_footer:nth-child(1) {
+.sub_item_footer:nth-child(1), .acoxpa-mapa {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
 
-.sub_item_footer iframe {
+.sub_item_footer iframe, .acoxpa-mapa iframe {
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.sub_item_footer:nth-child(2){
+.sub_item_footer:nth-child(2), .acoxpa-txt{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.sub_item_footer:nth-child(2) h4{
+.sub_item_footer:nth-child(2) h4, .acoxpa-txt h4{
     color: #621380;
     font-size: 30px;
 }
-.sub_item_footer:nth-child(2) p{
+.sub_item_footer:nth-child(2) p, .acoxpa-txt p{
     font-size: 19px;
 }
-.sub_item_footer:nth-child(2) a i{
+.sub_item_footer:nth-child(2) a i, .acoxpa-redes a i{
     color: #000;
     font-size: 32px;
     margin-left: 15px;
 }
 .header_dos h6{
     display: none;
+}
+.acoxpa-mapa {
+  grid-column-start: 2;
+}
+.acoxpa-txt {
+  grid-row-start: 1;
+}
+.container-mapa-acoxpa {
+  background-color: #eeee;
 }
 
 @media (max-width: 1023px) { 
@@ -758,7 +808,7 @@ footer{
         font-size: 30px;
         font-weight: 700;
     }
-    .item_footer:nth-child(1){
+    .item_footer:nth-child(1), .acoxpa-container{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -766,10 +816,10 @@ footer{
         padding: 30px 70px;
         gap: 30px;
     }
-    .sub_item_footer:nth-child(2) h4{
+    .sub_item_footer:nth-child(2) h4, .acoxpa-txt h4{
       font-size: 22px;
     }
-    .sub_item_footer:nth-child(2) p{
+    .sub_item_footer:nth-child(2) p, .acoxpa-txt p{
         font-size: 17px;
       }
 
@@ -1175,10 +1225,8 @@ footer{
 }
 footer{
     width: 100%;
-    
-    background-color: #eeee;
 }
-.item_footer:nth-child(1){
+.item_footer:nth-child(1), .acoxpa-container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 20px 0px;
@@ -1205,6 +1253,30 @@ footer{
   font-size: 35px;
 }
 
+  }
+
+  @media (max-width: 766px) {
+    .modal-promo{
+      flex-direction: column;
+    }
+    .modal-promo .modal-texto {
+      text-align: center;
+      top: 10%;
+      font-size: 20px;
+      font-weight: bold;
+      position: initial;
+      margin-top: 15%;
+      padding: 10px;
+    }
+    .modal-promo .cerrar-promo {
+      width: 25px;
+      top: 10px;
+    }
+    .modal-promo .promo {
+      max-width: 40%;
+      max-height: 30%;
+      margin: 10px 10px 10px 10px;
+    }
   }
   @media (max-width:480px){
     .header_uno img{
@@ -1442,7 +1514,7 @@ footer{
         text-align: justify;
         color: dimgrey;
     }
-    .item_footer:nth-child(1){
+    .item_footer:nth-child(1), .acoxpa-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
        width: 90%;
@@ -1524,6 +1596,13 @@ z-index: 150;
 		height: 40px;
 		line-height: 40px;
 	}
+}
+@media (min-width: 768px) {
+    .promo-5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        max-width: 500px;
+    }
 }
 @media (min-width:1024px) {
 	.icono_card_dos_22{
