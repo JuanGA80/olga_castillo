@@ -11,7 +11,11 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXTYL75JV1"></script>
   <script>
@@ -52,7 +56,8 @@
               <li><a href="#inicio" class="menu_link">Inicio</a></li>
               <li><a href="#promociones" class="menu_link">Promociones</a></li>
               <li><a href="#tratamientos" class="menu_link">Tratamientos</a></li>
-              <li><a href="#preguntas" class="menu_link">Preguntas Frecuentes</a></li>
+              <li><a href="#preguntas" class="menu_link">Preguntas</a></li>
+              <li><a href="#ubicacion" class="menu_link">Ubicación</a></li>
               <a href="https://wa.me/525564529359" target="_blank" class="icono_card_uno "><i class="fa-brands fa-whatsapp "></i></a>
               <a href="tel:5564529359" target="_blank" class="icono_card_dos "> 5564529359</i></a>  
           </ul>
@@ -79,13 +84,30 @@
     </header>
     <main>
       <section class="beginning" id="inicio">
-       <img src="imagenes/fondo_materno_fetal_dos.png" alt="">
-       <div class="card" >
+
+        <div class="slider-home" id="inicio">
+          <div class="mySlider fade">
+           
+            <img src="imagenes/fondo_materno_fetal_dos.png" alt="" class="slider-descktop" />
+          </div>
+          <div class="mySlider fade">
+
+            <img src="imagenes/slider-olga-3.png" alt="" class="slider-descktop" />
+          </div>
+          <div class="mySlider fade">
+          
+            <img src="imagenes/slider-olga-2.png" alt="" class="slider-descktop" />
+          </div>
+        
+
+        </div>
+        
+       <div class="card" data-aos="fade-down" data-aos-duration="1000" >
 
 
         <div class="item_card">
           <h3>¿Que  hacemos?</h3>
-          <hr>
+     
           <div class="sub_item_card">
             <ul>
              <p>
@@ -110,7 +132,7 @@
         </div>
          <div class="item_card">
            <h2>Dra. Olga Castillo </h2>
-           <hr>
+        
            <img src="imagenes/olga-castillo-logo_blanco.png" alt="" class="img_card">
            
 
@@ -139,101 +161,100 @@
       <img src="imagenes/PROMOS-OLGA-1.jpg" alt="promoción muelas" class="promo">
     </div>-->
       <section class="slider" id="promociones">
-        <h2>Promociones</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000">Promociones</h2>
       <!-- Swiper -->
-        <div class="container_promociones">
-          <div class="item_promo promo-5">
-            <img src="imagenes/PROMOS-OLGA-5.jpg" alt="">
-            <a href="https://wa.me/525564529359" target="_blank" >Contacto</a>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="imagenes/promo-1.jpeg" />
           </div>
-          <div class="item_promo">
-            <img src="imagenes/PROMOS-OLGA-1.jpg" alt="">
-            <a href="https://wa.me/525564529359" target="_blank" >Contacto</a>
+          <div class="swiper-slide">
+            <img src="imagenes/promo-2.jpeg" />
           </div>
-          <div class="item_promo">
-            <img src="imagenes/PROMOS-OLGA-2.jpg" alt="">
-            <a href="https://wa.me/525564529359" target="_blank" >Contacto</a>
+          <div class="swiper-slide">
+            <img src="imagenes/promo-3.jpeg" />
           </div>
-          <div class="item_promo">
-            <img src="imagenes/PROMOS-OLGA-3.jpg" alt="">
-            <a href="https://wa.me/525564529359" target="_blank" >Contacto</a>
+          <div class="swiper-slide">
+            <img src="imagenes/promo-4.jpeg" />
           </div>
-          <div class="item_promo">
-            <img src="imagenes/PROMOS-OLGA-4.jpg" alt="">
-            <a href="https://wa.me/525564529359" target="_blank" >Contacto</a>
+          <div class="swiper-slide">
+            <img src="imagenes/promo-5.jpeg" />
           </div>
+          
         </div>
+        <div class="swiper-pagination"></div>
+      </div>
       </section>
       <div class="ultrasonidos">
-        <h2>Ultrasonidos</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000">Ultrasonidos</h2>
         <div class="container_ultrasonidos">
-          <div class="item_ultrasonidos">
+          <div class="item_ultrasonidos" data-aos="fade-right" data-aos-duration="1000">
             <img src="imagenes/olga_3d_uno.jpeg" alt="">
             <div class="efecto">
-              <h2>Ultrasonido 3d </h2>
+              <h3>Ultrasonido 3d </h3>
               <hr>
             </div>
           </div>
-          <div class="item_ultrasonidos">
+          <div class="item_ultrasonidos" data-aos="fade-down" data-aos-duration="1000">
             <img src="imagenes/olga_4d.jpeg" alt="">
             <div class="efecto">
-              <h2>Ultrasonido 4d </h2>
+              <h3>Ultrasonido 4d </h3>
               <hr>
             </div>
           </div>
-          <div class="item_ultrasonidos">
+          <div class="item_ultrasonidos" data-aos="fade-left" data-aos-duration="1000">
             <img src="imagenes/olga_3d_dos.jpeg" alt="">
             <div class="efecto">
-              <h2>Ultrasonido 3d </h2>
+              <h3>Ultrasonido 3d </h3>
               <hr>
             </div>
           </div>
         </div>
-        <a href="https://wa.me/525564529359" target="_blank">Contacto</a>
+        <a href="https://wa.me/525564529359" target="_blank" data-aos="fade-up" data-aos-duration="1000">Contacto</a>
       </div>
       <div class="list" id="tratamientos">
-        <h2>Servicios y Tratamientos</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000">Servicios y Tratamientos</h2>
         <hr>
         <div class="container_tratamientos">
           <ul class="list_treatmients">
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Control prenatal</a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Realización de ultrasonido</a> 
+             <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Control prenatal</a> 
+             <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Realización de ultrasonido</a> 
             
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con preclampsia</a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con diabetes </a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Ginecología y Obstetricia</a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Medicina Materno Fetal</a> 
+             <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con preclampsia</a> 
+             <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con diabetes </a> 
+             <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Ginecología y Obstetricia</a> 
+             <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Medicina Materno Fetal</a> 
           
           </ul>
           <ul class="list_treatmients">
-           <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Exploración mamaria</a> 
-           <a href="#"> <i class="fa-solid fa-star"></i> &nbsp  Atención y tratamiento a sangrados  uterinos anormales </a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp  Diagnóstico de patologías fetales a través del ultrasonido  </a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Atendemos urgencias las 24 horas</a> 
-             <a href="#"> <i class="fa-solid fa-star"></i> &nbsp  Chequeo general </a> 
+           <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Exploración mamaria</a> 
+           <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp  Atención y tratamiento a sangrados  uterinos anormales </a> 
+             <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp  Diagnóstico de patologías fetales a través del ultrasonido  </a> 
+             <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Atendemos urgencias las 24 horas</a> 
+             <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp  Chequeo general </a> 
            
           
           </ul>
           <div class="btn_despega"> <span>Más información</span> <i class="fas fa-chevron-down flecha"></i></div>
           <div class="menu_aparece">
             <ul class="sub_menu">
-              <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Control prenatal</a> 
-              <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Realización de ultrasonido</a> 
+              <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Control prenatal</a> 
+              <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Realización de ultrasonido</a> 
              
-              <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con preclampsia</a> 
-              <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con diabetes </a> 
-              <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Ginecología y Obstetricia</a> 
-              <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Medicina Materno Fetal</a> 
+              <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con preclampsia</a> 
+              <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Pacientes con diabetes </a> 
+              <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Ginecología y Obstetricia</a> 
+              <a href="#" data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Medicina Materno Fetal</a> 
            
            </ul>
                  
                <ul class="sub_menu">
-                <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Exploración mamaria</a> 
-                <a href="#"> <i class="fa-solid fa-star"></i> &nbsp  Atención y tratamiento a sangrados  uterinos anormales </a> 
-                  <a href="#"> <i class="fa-solid fa-star"></i> &nbsp  Diagnóstico de patologías fetales a través del ultrasonido  </a> 
-                  <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Atendemos urgencias las 24 horas</a> 
-                  <a href="#"> <i class="fa-solid fa-star"></i> &nbsp Ecografías</a> 
-                  <a href="#"> <i class="fa-solid fa-star"></i> &nbsp  Chequeo general </a> 
+                <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Exploración mamaria</a> 
+                <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp  Atención y tratamiento a sangrados  uterinos anormales </a> 
+                  <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp  Diagnóstico de patologías fetales a través del ultrasonido  </a> 
+                  <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Atendemos urgencias las 24 horas</a> 
+                  <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp Ecografías</a> 
+                  <a href="#"data-aos="fade-right" data-aos-duration="1000"> <i class="fa-solid fa-star"></i> &nbsp  Chequeo general </a> 
                    
                    
                   
@@ -247,9 +268,9 @@
       <section class="atencion" id="preguntas">
        
         <div class="menu_desplegable">
-            <div class="btn_despega"> <h6>Ultrasonidos 3D y 4D</h6> <i class="fas fa-chevron-down flecha"></i></div>
+            <div class="btn_despega" data-aos="fade-down" data-aos-duration="1000"> <h6>Ultrasonidos 3D y 4D</h6> <i class="fas fa-chevron-down flecha"></i></div>
             <div class="menu_aparece">
-              <h2>¿Que contiene?</h2>
+              <h2 >¿Que contiene?</h2>
                 <ul class="sub_menu">
                    
                  <ul class="su_menu">
@@ -276,9 +297,9 @@
                     
                 </ul>
             </div>
-            <div class="btn_despega"> <h6>Ultrasonido  genético (11 – 13.6 semanas)  </h6> <i class="fas fa-chevron-down flecha"></i></div>
+            <div class="btn_despega" data-aos="fade-down" data-aos-duration="1000"> <h6>Ultrasonido  genético (11 – 13.6 semanas)  </h6> <i class="fas fa-chevron-down flecha"></i></div>
             <div class="menu_aparece">
-              <h2>¿Que contiene?</h2>
+              <h2 >¿Que contiene?</h2>
               
                 <ul class="sub_menu">
                   <li><a href="#">Determinar la edad gestacional </a></li>
@@ -292,9 +313,9 @@
                 </ul>
                
             </div>
-            <div class="btn_despega"> <h6>Ultrasonido estructural (18-23.6 semanas) </h6> <i class="fas fa-chevron-down flecha"></i></div>
+            <div class="btn_despega" data-aos="fade-down" data-aos-duration="1000"> <h6>Ultrasonido estructural (18-23.6 semanas) </h6> <i class="fas fa-chevron-down flecha"></i></div>
             <div class="menu_aparece">
-              <h2>¿Que contiene?</h2>
+              <h2 >¿Que contiene?</h2>
               
                 <ul class="sub_menu">
                 <li><a href="#">Evaluar a detalle la anatomía fetal</a></li>
@@ -307,9 +328,9 @@
                     
                 </ul>
             </div>
-            <div class="btn_despega"> <h6>Ultrasonido de crecimiento </h6> <i class="fas fa-chevron-down flecha"></i></div>
+            <div class="btn_despega" data-aos="fade-down" data-aos-duration="1000"> <h6>Ultrasonido de crecimiento </h6> <i class="fas fa-chevron-down flecha"></i></div>
             <div class="menu_aparece">
-              <h2>¿Que contiene?</h2>
+              <h2 >¿Que contiene?</h2>
               
                 <ul class="sub_menu">
                   <li><a href="#">Ultrasonido de crecimiento o del tercer trimestre  (24 semanas en adelante)</a></li>
@@ -328,14 +349,14 @@
     <h2 class="title_value">¿POR QUÉ SOMOS TU MEJOR OPCIÓN?</h2>
     <section class="value_points">
       <div class="item_values_points">
-        <i class="fa-solid fa-user-doctor"></i>
+        <i class="fa-solid fa-user-doctor" data-aos="fade-down" data-aos-duration="1000"></i>
         <h3>Médico
           especialista</h3>
         <p>La Dra Olga Castillo es especialista en Ginecología y Obstetricia  con subespecialidad en Medicina Materno Fetal con amplia experiencia en el control prenatal
            de embarazos de alto riesgo y el cuidado de la salud de la mujer.</p>
       </div>
       <div class="item_values_points">
-        <i class="fa-solid fa-microchip"></i>
+        <i class="fa-solid fa-microchip" data-aos="fade-down" data-aos-duration="1000"></i>
         <h3>Tecnología
           de vanguardia</h3>
        <p>Contamos con la mejor tecnología para realizar diagnósticos oportunos, tratamientos y un adecuado seguimiento del embarazo y salud de la mujer.</p>
@@ -343,14 +364,14 @@
       </div>
       <div class="item_values_points">
      
-         <i class="fa-solid fa-hospital"></i>
+         <i class="fa-solid fa-hospital" data-aos="fade-down" data-aos-duration="1000"></i>
          <h3>Diagnósticos
            confiables</h3>
        <p>Gracias a nuestra experiencia profesional le brindamos una consulta materno fetal, ginecología y obstetricia ademas de un diagnóstico certero.</p>
 
       </div>
       <div class="item_values_points">
-        <i class="fa-solid fa-face-smile-beam"></i>
+        <i class="fa-solid fa-face-smile-beam" data-aos="fade-down" data-aos-duration="1000"></i>
         <h3>Calidad y atención humana</h3>
    <p>Te brindamos un trato cálido, integral y personalizado de acuerdo con las necesidades específicas de tu caso.</p>
 
@@ -361,9 +382,9 @@
    
 
     </main>
-    <section class="container-acoxpa-mapa">
+    <section class="container-acoxpa-mapa" id="ubicacion">
       <div class="acoxpa-container" id="contacto">
-        <div class="acoxpa-mapa">
+        <div class="acoxpa-mapa" data-aos="fade-left" data-aos-duration="1000">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.5960870364675!2d-99.13777319031206!3d19.29992354483146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce01af74a4cc7b%3A0x1e00d087af935a9b!2sHospital%20Angeles%20Acoxpa!5e0!3m2!1ses-419!2smx!4v1695063736366!5m2!1ses-419!2smx" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="acoxpa-txt">
@@ -381,10 +402,28 @@
         </div>
       </div>
     </section>
+    <div class="contenedor">
+      <button class="botonF1">
+        <span>+</span>
+      </button>
+      <button class="btn botonF2">
+        <a href="tel:5564529359">
+          <span><i class="fa-solid fa-phone"></i></span>
+        </a>
+      
+      </button>
+      <button class="btn botonF3">
+        <a href="https://api.whatsapp.com/send/?phone=525564529359" target="_blank">
+          <span><i class="fa-brands fa-whatsapp"></i></span>
+        </a>
+        
+      </button>
+      
+       </div>
     <footer>
       
     <div class="item_footer" id="contacto">
-      <div class="sub_item_footer">
+      <div class="sub_item_footer" data-aos="fade-right" data-aos-duration="1000">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.2341856173653!2d-99.16970718561902!3d19.359009948047365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffc0214dc77b%3A0xf9bf0cf41258931!2sAv.%20R%C3%ADo%20Churubusco%20601%2C%20Xoco%2C%20Benito%20Ju%C3%A1rez%2C%2003330%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1648054883697!5m2!1ses-419!2smx" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
       <div class="sub_item_footer">
@@ -411,7 +450,13 @@
      <!-- Swiper JS -->
      <script src="js/menu.js"></script>
      <script src="js/submenu.js"></script>
+     <script src="js/slider.js"></script>
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+      AOS.init();
+    </script>
+     
 
      <!-- Initialize Swiper -->
      <script>
@@ -428,7 +473,7 @@
           slideShadows: true,
         },
         autoplay: {
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         },
         pagination: {
@@ -436,6 +481,19 @@
           clickable: true
         },
       });
+  
+   
     </script>
+
+    <script>
+      $('.botonF1').click(function(){
+  $('.btn').addClass('animacionVer');
+})
+$('.contenedor').mouseleave(function(){
+  $('.btn').removeClass('animacionVer');
+})
+    </script>
+
+   
 </body>
 </html>
